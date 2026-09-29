@@ -27,9 +27,9 @@ I chose the "Reliability Across Multiple Networks" problem to dive deeper into. 
 
 **C. Connection to 1974 Paper**
 
-From what I learned through my conversation with the AI (which was a Claude session), it seems as though a lot of what Cerf-Khan propesed in 1974 is still used today. TCP is very widely used across the internet 50 years later because of its reliability. A file download will always complete because it uses TCP; if something fails in the download, the receiver notifies the sender of the error and that specific part of the download is retried.
+From what I learned through my conversation with the AI (which was a Claude session), it seems as though a lot of what Cerf-Kahn proposed in 1974 is still used today. TCP is very widely used across the internet 50 years later because of its reliability. A file download will always complete because it uses TCP; if something fails in the download, the receiver notifies the sender of the error and that specific part of the download is retried.
 
-It was quickly realized, though, that TCP wasn't the best solution to every problem that would arise after Cerf-Khan wrote their paper. Certain programs, like online multiplayer games and video calls, don't care as much about that two-way reliability that TCP guarentees; by the time the delayed packet reaches its destination, it will be stale and not needed by the user anymore. This is why UDP was created, which is a 1-way street for packets instead of a 2-way street. UDP allowed these services to prioritize speed as they weren't required to wait for the proper response from the recipient. This speed is, of course, much more important in video calls and multiplayer games, even if it comes at the cost of reliability.
+It was quickly realized, though, that TCP wasn't the best solution to every problem that would arise after Cerf-Kahn wrote their paper. Certain programs, like online multiplayer games and video calls, don't care as much about that two-way reliability that TCP guarantees; by the time the delayed packet reaches its destination, it will be stale and not needed by the user anymore. This is why UDP was created, which is a 1-way street for packets instead of a 2-way street. UDP allowed these services to prioritize speed as they weren't required to wait for the proper response from the recipient. This speed is, of course, much more important in video calls and multiplayer games, even if it comes at the cost of reliability.
 
 **D. Surprise Finding**
 
@@ -63,3 +63,4 @@ AI: Exactly — the decision gets made per type of data, based on whether a dela
 
 ### Part 3: Reflection
 
+I found Cerf-Kahn's fragmentation solution to the packet size difference issue to be rather cool and ingenious. It's such a simple solution, yet something that worked so well at the time, and the gateway didn't even need to do all of the work. I was also able to learn much about more modern applications of Cerf-Kahn's proposals from the AI conversation, which is obviously something I couldn't have gleaned from the paper itself. I feel as though I'm able to appreciate how the different pieces of the internet are connected on a much finer level now thanks to this assignment. It feels good to be able to break such a large and imposing interface into its more granular pieces.
